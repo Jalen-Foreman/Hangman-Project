@@ -1,0 +1,11 @@
+h1 {
+   color: rgba(220, 60, 0, 1);
+   display: flex;
+   justify-content: center;
+}
+
+#alphabet{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
