@@ -42,12 +42,12 @@ window.onload = function () {
 	let showLives = document.getElementById('mylives');
 	
 
-	// create alphabet ul
+	// alphabet ul
 	let buttons = function () {
 		myButtons = document.getElementById('buttons');
 		letters = document.createElement('ul');
 
-		for (var i = 0; i < alphabet.length; i++) {
+		for (let i = 0; i < alphabet.length; i++) {
 			letters.id = 'alphabet';
 			list = document.createElement('li');
 			list.id = 'letter';
@@ -71,6 +71,7 @@ window.onload = function () {
 
 	// Create geusses ul
 	result = function () {
+        // grab holder for word properties
 		wordHolder = document.getElementById('hold');
 		correct = document.createElement('ul');
 
@@ -78,13 +79,14 @@ window.onload = function () {
 			correct.setAttribute('id', 'my-word');
 			guess = document.createElement('li');
 			guess.setAttribute('class', 'guess');
+            // check if word has spaces and implement a dash, else keep underscore element
 			if (word[i] === '-') {
 				guess.innerHTML = '-';
 				space = 1;
 			} else {
 				guess.innerHTML = '_';
 			}
-
+            // append elements
 			geusses.push(guess);
 			wordHolder.appendChild(correct);
 			correct.appendChild(guess);
@@ -126,18 +128,21 @@ window.onload = function () {
 
 	// Play
 	play = function () {
+        // categories array
 		categories = [
 			['LEBRON JAMES', 'MICHAEL JORDAN', 'STEPHEN CURRY'],
 			['FRIED SHRIMP', 'GRAPES', 'TUNA'],
 			['JAVASCRIPT', 'PYTHON', 'JAVA', 'SWIFT', 'SCALA'],
 		];
-
+        // selecting random categories
 		chosenCategory = categories[Math.floor(Math.random() * categories.length)];
+        // selecting random words in the categories
 		word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
+        // replace word from categories into underscores.
 		word = word.replace(/\s/g, '-');
-		console.log(word);
+		// console.log(word);
 		buttons();
-
+        // adding variables and functions for functionality
 		geusses = [];
 		lives = 10;
 		counter = 0;
@@ -146,10 +151,10 @@ window.onload = function () {
 		comments();
 		categorySelect();
 	};
-
+    // invoking play function to page
 	play();
 
-	// Reset
+	// Reset the game with click of reset button
 
 	document.getElementById('reset').onclick = function () {
 		correct.parentNode.removeChild(correct);
