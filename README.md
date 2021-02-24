@@ -1,7 +1,7 @@
 # Spaceman-project
 
 # MVP
-As a player, I want to know the length of the word being guessed, feedback if i got the letter correct or incorrect, and a track of how many atttempts I have left, so that I know if I am about to win or lose.
+As a player, I want to know the length of the word being guessed, a track of how many atttempts I have left, so that I know if I am about to win or lose.
 
 ## BRONZE
 
