@@ -1,0 +1,33 @@
+.wrappper {
+   width: 100%;
+   margin: 0 auto;
+}
+body {
+   background: brown;
+   font-family: 'DotGothic16', sans-serif;
+   color: lightgray;
+   height: 100%;
+   text-align: center;
+   font-size: 18px;
+}
+li {
+   float: left;
+   margin: 0 10px 10px 0;
+   list-style: none;
+   width: 35px;
+   height: 30px;
+   padding-top: 10px;
+   background: lightgray;
+   color: black;
+   font-weight:700;
+   cursor: pointer;
+   border-radius: 5px;
+   border: solid 1px lightgray;
+}
+li {
+   margin: 15px auto;
+   padding: 0;
+   max-width: 900px;
+   display: flex;
+   justify-content: space-between;
+}
